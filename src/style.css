@@ -7,13 +7,13 @@
 }
 
 main {
-    display: flex;
+  display: flex;
 }
 
 h1 {
-    margin-left: 10vw;
-    margin-top: 10vh;
-    font-size: 55px;
+  margin-left: 10vw;
+  margin-top: 10vh;
+  font-size: 55px;
 }
 
 #scores {
@@ -50,17 +50,17 @@ button {
 }
 
 #add-score {
-    margin: 10vh auto 10vw 10vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  margin: 10vh auto 10vw 10vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 form {
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    height: 100px;
-    justify-content: space-between;
-    align-items: flex-end;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  justify-content: space-between;
+  align-items: flex-end;
 }
