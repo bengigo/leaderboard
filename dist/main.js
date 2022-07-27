@@ -136,7 +136,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst listData = [\n  {\n    name: \"Bengi\",\n    score: \"100\",\n  },\n  {\n    name: \"Hüseyin\",\n    score: \"20\",\n  },\n  {\n    name: \"Güray\",\n    score: \"50\",\n  },\n  {\n    name: \"Pınar\",\n    score: \"78\",\n  },\n  {\n    name: \"Kudra\",\n    score: \"125\",\n  },\n];\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (listData);\n\n\n//# sourceURL=webpack://leaderboard/./src/modules/placeholderData.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst listData = [\n  {\n    name: 'Bengi',\n    score: '100',\n  },\n  {\n    name: 'Hüseyin',\n    score: '20',\n  },\n  {\n    name: 'Güray',\n    score: '50',\n  },\n  {\n    name: 'Pınar',\n    score: '78',\n  },\n  {\n    name: 'Kudra',\n    score: '125',\n  },\n];\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (listData);\n\n\n//# sourceURL=webpack://leaderboard/./src/modules/placeholderData.js?");
 
 /***/ })
 
