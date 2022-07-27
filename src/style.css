@@ -42,7 +42,7 @@ button {
 }
 
 .row {
-    padding: 5px;
+  padding: 5px;
 }
 
 .row:nth-child(odd) {

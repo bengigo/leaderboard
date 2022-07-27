@@ -1,15 +1,15 @@
-import listData from "./placeholderData.js";
+import listData from ''./placeholderData.js';
 
-let displayList = () => {
+const displayList = () => {
     const listContainer = document.querySelector('#list');
 
     listData.forEach((data) => {
-        listContainer.innerHTML += `
-        <div class="row">
-          <p>${data.name}:${data.score}</p>
-        </div>
-        `
-    })
-}
+      listContainer.innerHTML += `
+      <div class="row">
+        <p>${data.name}:${data.score}</p>
+      </div>
+      `
+    });
+};
 
 export default displayList;
