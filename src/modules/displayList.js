@@ -1,4 +1,4 @@
-import listData from ''./placeholderData.js';
+import listData from './placeholderData.js';
 
 const displayList = () => {
     const listContainer = document.querySelector('#list');
@@ -10,6 +10,6 @@ const displayList = () => {
       </div>
       `
     });
-};
+}
 
 export default displayList;
