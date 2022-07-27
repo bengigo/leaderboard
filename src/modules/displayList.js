@@ -8,7 +8,7 @@ const displayList = () => {
     <div class="row">
       <p>${data.name}:${data.score}</p>
     </div>
-    `
+    `;
   });
 };
 
