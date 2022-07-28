@@ -1,15 +1,15 @@
-import listData from './placeholderData.js';
+const displayContainer = document.querySelector('#list');
+const displayScores = (object) => {
+  const scores = object.result;
 
-const displayList = () => {
-  const listContainer = document.querySelector('#list');
-
-  listData.forEach((data) => {
-    listContainer.innerHTML += `
+  scores.sort((a, b) => b.score - a.score);
+  scores.forEach((score) => {
+    displayContainer.innerHTML += `
     <div class="row">
-      <p>${data.name}:${data.score}</p>
+      <p>${score.user}: ${score.score}</p>
     </div>
     `;
   });
 };
 
-export default displayList;
+export default displayScores;
