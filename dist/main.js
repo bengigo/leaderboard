@@ -116,7 +116,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_displayList_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/displayList.js */ \"./src/modules/displayList.js\");\n\n\n\n(0,_modules_displayList_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n\n//# sourceURL=webpack://leaderboard/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_postData_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/postData.js */ \"./src/modules/postData.js\");\n/* harmony import */ var _modules_getData__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/getData */ \"./src/modules/getData.js\");\n/* harmony import */ var _modules_displayList__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/displayList */ \"./src/modules/displayList.js\");\n\n\n\n\n\nconst refresh = () => {\n  window.location.reload();\n  (0,_modules_getData__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n};\n\nconst refreshButton = document.querySelector(\"#refresh\");\nrefreshButton.addEventListener(\"click\", () => {\n  window.location.reload();\n  refresh();\n});\n\nconst form = document.querySelector(\"form\");\n\nform.onsubmit = (e) => {\n  e.preventDefault();\n  const name = document.querySelector(\"#name\").value;\n  const score = document.querySelector(\"#score\").value;\n  (0,_modules_postData_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(name, score);\n  form.reset();\n  \n  const message = document.querySelector('span');\n  const showMessage = () => {\n    message.innerHTML = 'Refresh the list!';\n  };\n\n  setTimeout(showMessage, 3000);\n  \n};\n\n(0,_modules_getData__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n\n(0,_modules_displayList__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\n\n//# sourceURL=webpack://leaderboard/./src/index.js?");
 
 /***/ }),
 
@@ -126,17 +126,27 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
   \************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _placeholderData_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./placeholderData.js */ \"./src/modules/placeholderData.js\");\n\n\nconst displayList = () => {\n  const listContainer = document.querySelector('#list');\n\n  _placeholderData_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"].forEach((data) => {\n    listContainer.innerHTML += `\n    <div class=\"row\">\n      <p>${data.name}:${data.score}</p>\n    </div>\n    `;\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (displayList);\n\n//# sourceURL=webpack://leaderboard/./src/modules/displayList.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst displayContainer = document.querySelector(\"#list\");\nconst displayScores = (object) => {\n  const scores = object.result;\n\n  scores.sort((a, b) => b.score - a.score);\n  scores.forEach((score) => {\n    displayContainer.innerHTML += `\n    <div class=\"row\">\n      <p>${score.user}: ${score.score}</p>\n    </div>\n    `;\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (displayScores);\n\n//# sourceURL=webpack://leaderboard/./src/modules/displayList.js?");
 
 /***/ }),
 
-/***/ "./src/modules/placeholderData.js":
-/*!****************************************!*\
-  !*** ./src/modules/placeholderData.js ***!
-  \****************************************/
+/***/ "./src/modules/getData.js":
+/*!********************************!*\
+  !*** ./src/modules/getData.js ***!
+  \********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst listData = [\n  {\n    name: 'Bengi',\n    score: '100',\n  },\n  {\n    name: 'Hüseyin',\n    score: '20',\n  },\n  {\n    name: 'Güray',\n    score: '50',\n  },\n  {\n    name: 'Pınar',\n    score: '78',\n  },\n  {\n    name: 'Kudra',\n    score: '125',\n  },\n];\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (listData);\n\n\n//# sourceURL=webpack://leaderboard/./src/modules/placeholderData.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _displayList__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./displayList */ \"./src/modules/displayList.js\");\n\n\nconst getData = async () => {\n  await fetch(\n    \"https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/BHYQVyVnvpPxEW9OxRy4/scores\"\n  )\n    .then((response) => response.json())\n    .then((json) => (0,_displayList__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(json));\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getData);\n\n//# sourceURL=webpack://leaderboard/./src/modules/getData.js?");
+
+/***/ }),
+
+/***/ "./src/modules/postData.js":
+/*!*********************************!*\
+  !*** ./src/modules/postData.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst postData = async (name, score) => {\n  await fetch(\n    \"https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/BHYQVyVnvpPxEW9OxRy4/scores\",\n    {\n      method: \"POST\",\n      body: JSON.stringify({\n        user: name,\n        score: score,\n      }),\n      headers: {\n        \"Content-type\": \"application/json; charset=UTF-8\",\n      },\n    }\n  ).then((response) => response.json());\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (postData);\n\n//# sourceURL=webpack://leaderboard/./src/modules/postData.js?");
 
 /***/ })
 
