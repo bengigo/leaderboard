@@ -20,6 +20,7 @@
     },
     "ignorePatterns": [
       "docs/",
-      "build/"
+      "build/",
+      "dist/"
     ]
   }

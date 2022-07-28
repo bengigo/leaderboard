@@ -1,16 +1,16 @@
 const postData = async (name, score) => {
   await fetch(
-    "https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/BHYQVyVnvpPxEW9OxRy4/scores",
+    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/BHYQVyVnvpPxEW9OxRy4/scores',
     {
-      method: "POST",
+      method: 'POST',
       body: JSON.stringify({
         user: name,
-        score: score,
+        score,
       }),
       headers: {
-        "Content-type": "application/json; charset=UTF-8",
+        'Content-type': 'application/json; charset=UTF-8',
       },
-    }
+    },
   ).then((response) => response.json());
 };
 

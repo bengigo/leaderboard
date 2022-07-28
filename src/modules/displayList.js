@@ -1,4 +1,4 @@
-const displayContainer = document.querySelector("#list");
+const displayContainer = document.querySelector('#list');
 const displayScores = (object) => {
   const scores = object.result;
 
