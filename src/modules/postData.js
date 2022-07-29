@@ -1,4 +1,5 @@
-import getData from "./getData";
+import getData from './getData.js';
+
 const postData = async (name, score) => {
   await fetch(
     'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/BHYQVyVnvpPxEW9OxRy4/scores',
@@ -13,7 +14,7 @@ const postData = async (name, score) => {
       },
     },
   ).then((response) => response.json())
-  .then(() => getData());;
+    .then(() => getData());
 };
 
 export default postData;

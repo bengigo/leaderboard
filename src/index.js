@@ -22,8 +22,6 @@ form.onsubmit = (e) => {
   const score = document.querySelector('#score').value;
   postData(name, score);
   form.reset();
-
-
 };
 
 getData();

@@ -1,6 +1,6 @@
 const displayContainer = document.querySelector('#list');
 const displayScores = (object) => {
-  displayContainer.innerHTML = "";
+  displayContainer.innerHTML = '';
   const scores = object.result;
   scores.sort((a, b) => b.score - a.score);
   scores.forEach((score) => {
