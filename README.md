@@ -2,7 +2,7 @@
 
 # Leaderboard
 
-> A web app for you and your friends to add your scores of your favorite game.
+> A web app for you and your friends to add your scores of your favorite game -Terraria.
 
 
 ## Built With
