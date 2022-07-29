@@ -85,3 +85,6 @@ form {
   align-items: flex-end;
 }
 
+input {
+  border: 3px solid orange;
+}
