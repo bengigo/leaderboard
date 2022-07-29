@@ -4,6 +4,7 @@
   padding: 0;
   font-family: 'Source Code Pro', monospace;
   font-weight: 800;
+  color:black;
 }
 
 body {
@@ -24,8 +25,8 @@ h1 {
 }
 
 #scores {
-  background-color: white;
   margin: 10vh auto 10vw 10vw;
+  width: 25vw;
 }
 
 #list-heading {
@@ -44,8 +45,12 @@ button {
 }
 
 #list {
-  border: 3px solid black;
+  border: 3px solid orange;
   margin-top: 15px;
+}
+
+p {
+  text-align: center;
 }
 
 .row {
@@ -53,7 +58,11 @@ button {
 }
 
 .row:nth-child(odd) {
-  background-color: darkgray;
+  background-color: rgb(170, 204, 170);
+}
+
+.row:nth-child(even) {
+  background-color: rgb(219, 237, 219);
 }
 
 #add-score {
