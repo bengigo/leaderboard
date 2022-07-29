@@ -23,12 +23,7 @@ form.onsubmit = (e) => {
   postData(name, score);
   form.reset();
 
-  const message = document.querySelector('span');
-  const showMessage = () => {
-    message.innerHTML = 'Refresh the list!';
-  };
 
-  setTimeout(showMessage, 3000);
 };
 
 getData();
