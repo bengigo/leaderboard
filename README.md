@@ -30,17 +30,17 @@ To get a local copy up and running follow these simple example steps.
 - Go to the repository folder in your command prompt cd leaderboard
 - Run `npm install` to install the dev dependencies for linters and webpack
 
-## 👤 Author
+## 👤 Bengi Genç
 
-- GitHub: [@githubhandle](https://github.com/bengigo)
-- Twitter: [@twitterhandle](https://twitter.com/bengi_gb)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/bengi-g-03b883199/)
+- GitHub: [@bengigo](https://github.com/bengigo)
+- Twitter: [@bengi_gb](https://twitter.com/bengi_gb)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/bengigenc/)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/bengigo/leaderboard/issues).
 
 ## Show your support
 
